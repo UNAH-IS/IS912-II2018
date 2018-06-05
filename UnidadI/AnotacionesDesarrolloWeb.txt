@@ -1,0 +1,85 @@
+HTML (HyperText Markup Language): Para definir la estructura de una pagina web.
+XML (Xtensible Markup Language)
+
+<etiqueta>
+</etiqueta>
+
+
+
+CSV:
+Pedro,35,Masculino,666789
+
+
+XML:
+<persona>
+    <nombre>Pedro</nombre>
+    <edad>35</edad>
+    <genero>MAsculino</genero>
+    <telefono>666789</telefono>
+</persona>
+
+JSON
+persona = {
+    nombre:"Pedro",
+    edad:35,
+    genero:"Masculino",
+    telefono:666789
+}
+
+
+
+
+
+
+
+Direccion IP: 0.0.0.0 - 255.255.255.255
+Sirve para identificar a una computadora en una red.
+    Direcciones IP privadas:
+        Rangos de ips.
+    Direcciones IP publicas:
+        Rangos de ips.
+
+
+IP de google: 216.58.192.36
+
+Nombre de dominio: Alias o nombre para una direccion IP.
+Empresas comunes:
+    Godaddy
+    Heroku
+    puntohn (Local, Red de desarrollo sostenible en HN)
+
+
+Hosting/Hospedaje: ip publica, Disco duro y servicios para publicar una web.
+Nombre de dominio: Alias para enlazar a una direccion ip publica
+
+Apache: Servidor para publicar paginas desarrolladas en PHP
+
+WAMP - WindowsApacheMysqlPHP (Descargar antes VisualC .net framework)
+LAMPP - LinuxApacheMysqlPHP-Perl
+MAMP - MacApacheMysqlPHP
+XAMPP - X SO ApacheMysqlPHP Perl
+
+
+
+Apache es un programa tipo servicio, demonio o programa en segundo plano: Por lo general no tienen GUI
+    Ver servicios en windows: Panel de control - Herramientas Administrativas - Servicios
+
+
+
+
+
+Servidor web con NodeJS
+1. Instalar NodeJS
+2. Crear una carpeta para cada proyecto.
+3. Acceder a la carpeta del proyecto desde la consola.
+4. Ejecutar el comando npm init   //npm (Node Package Manager)
+    Sirve para crear una nueva aplicacion en NodeJS, crea un archivo 
+    de configuraciones con el nombre package.json
+5. Crear el archivo de punto de partida, es decir el servidor (index.js).
+6. Instalar el framework o modulo express: npm install express --save
+7. Programar el servidor: 
+            ......
+
+
+npm install nombremodulo
+

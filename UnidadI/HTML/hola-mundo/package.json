@@ -1,0 +1,14 @@
+{
+  "name": "hola-mundo",
+  "version": "1.0.0",
+  "description": "Este es nuestro pirmer proyecto con un servidor de NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erick",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
