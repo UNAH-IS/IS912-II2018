@@ -28,6 +28,8 @@ persona = {
 
 
 
+En caso de que no este la carpeta node_modules se pueden instalar todos los modulos de dependencia utilizando el comando npm install dentro de la carpeta del proyecto.
+
 
 
 
