@@ -101,3 +101,15 @@ Servidor web con NodeJS
 
 npm install nombremodulo
 
+
+
+Hojas de estilo en cascada - CSS (Cascading Stylesheets)
+Es posible aplicar estilos de la siguiente forma:
+1. Estilos en linea: Se usan directamente en la etiqueta en la cual se quiere aplicar los estilos. 
+    Se implementan utilizando el ATRIBUTO style. La sintaxis para configurar los estilos es:
+        nombre-estilo-1:valor-estilo-1;nombre-estilo-2:valor-estilo-2;...;nombre-estilo-N:valor-estilo-N;
+2. Estilos en el enacabezado de la página
+    Se implementan utilizando la etiqueta style (definirla dentro de la etiqueta head) y dentro de ella se definen los estilos agrupados por selectores.
+    Los selectores son identificadores que ayudan a enlazar los estilos definidos con las etiquetas a las cuales se aplicaran.
+
+3. Estilos en archivos externos
