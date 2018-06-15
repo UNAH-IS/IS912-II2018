@@ -1,0 +1,42 @@
+/*Hoja de estilos*/
+
+p{
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.texto-negrita{
+    font-weight: bold;
+}
+
+.texto-cursiva{
+    font-style: italic;
+}
+h1{
+    color:white;
+}
+
+.texto-importante{
+    color: red;
+}
+
+#ultimo-parrafo{
+    color:aqua;
+}
+
+p{
+    color:white;
+}
+
+
+.titulo-importante{
+    color: blue;
+}
+
+
+.titulo-importante{
+    color: yellow;
+}
+
+.titulo-importante{
+    color: green;
+}

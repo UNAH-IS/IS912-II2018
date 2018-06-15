@@ -111,5 +111,33 @@ Es posible aplicar estilos de la siguiente forma:
 2. Estilos en el enacabezado de la página
     Se implementan utilizando la etiqueta style (definirla dentro de la etiqueta head) y dentro de ella se definen los estilos agrupados por selectores.
     Los selectores son identificadores que ayudan a enlazar los estilos definidos con las etiquetas a las cuales se aplicaran.
+    Los selectores que se pueden utilizar son:
+    -IDs: Se hace referencia a ellos poniendo como prefijo el simbolo numeral y luego definiendo los estilos:
+        #id{
+            nombre-estilo-1:valor-estilo-1;
+            nombre-estilo-2:valor-estilo-2;
+            ...;
+            nombre-estilo-N:valor-estilo-N;    
+        }
 
-3. Estilos en archivos externos
+    -Mediante los nombres de las etiquetas. Para definirlos basta con poner el nombre de la etiqueta y escribir los estilos entre llaves
+        nombre-etiqueta{
+            nombre-estilo-1:valor-estilo-1;
+            nombre-estilo-2:valor-estilo-2;
+            ...;
+            nombre-estilo-N:valor-estilo-N;    
+        }
+    -Mediante clases CSS
+        Se definen utilizando como prefijo un punto seguido del nombre de la clase CSS.
+        .nombre-clase{
+            nombre-estilo-1:valor-estilo-1;
+            nombre-estilo-2:valor-estilo-2;
+            ...;
+            nombre-estilo-N:valor-estilo-N;    
+        }
+
+        Para aplicar una clase css a una etiqueta se utiliza el atributo class.
+        Se pueden asignar varias clases CSS a una etiqueta separandolas por un espacio.
+3. Estilos en archivos externos:
+    Se escriben los estilos en un archivo con extensión css y se incluyen en el html de la siguiente forma:
+        <link href="url-estilos.css" rel="stylesheet">

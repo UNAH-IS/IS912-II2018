@@ -6,6 +6,7 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    
     <style>
         /*Comentarios en CSS */
         @font-face{
@@ -23,10 +24,16 @@
             font-family: 'Pacifico', cursive;
         }
 
-        p{
-            font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       .titulo-importante{
+            color: chocolate;
+            font-size:80px;
+        }
+
+        .titulo-importante{
+            color: gray;
         }
     </style>
+    <link href="css/estilos.css" rel="stylesheet">
 </head>
 <body style="background-image: url(img/homero.jpg)">
     <h1>Reglas CSS</h1>    
@@ -44,21 +51,34 @@
         <p id="parrafo-cuarto">Tempor excepteur dolore quis veniam labore quis ut. Consectetur labore nostrud sint quis sint. Enim sunt elit excepteur do nisi minim sunt aliqua enim commodo pariatur. Aliquip ut cillum nisi aliqua mollit sint sit id ipsum voluptate. Aute incididunt incididunt sint non. Elit culpa culpa do consequat.</p>
 
         <h1>Titulo</h1>
-        <p>Qui do commodo elit do minim tempor incididunt fugiat. Consectetur id consequat tempor reprehenderit dolore esse mollit qui. Ad aliquip elit voluptate in magna. Id laborum cillum adipisicing enim.</p>
+        <p class="texto-negrita texto-cursiva">Qui do commodo elit do minim tempor incididunt fugiat. Consectetur id consequat tempor reprehenderit dolore esse mollit qui. Ad aliquip elit voluptate in magna. Id laborum cillum adipisicing enim.</p>
 
         <h1>Titulo</h1>
-        <p>Qui do commodo elit do minim tempor incididunt fugiat. Consectetur id consequat tempor reprehenderit dolore esse mollit qui. Ad aliquip elit voluptate in magna. Id laborum cillum adipisicing enim.</p>
+        <p class="texto-negrita texto-cursiva">Qui do commodo elit do minim tempor incididunt fugiat. Consectetur id consequat tempor reprehenderit dolore esse mollit qui. Ad aliquip elit voluptate in magna. Id laborum cillum adipisicing enim.</p>
 
         <h1>Titulo</h1>
         <p>Nisi ut enim labore ad aliquip incididunt ea velit. Sit voluptate enim et anim ad elit minim minim tempor cupidatat duis consectetur cupidatat. Anim culpa aliquip consectetur deserunt ullamco dolore cupidatat.</p>
         
-        <h1>Titulo</h1>
-        <p>Tempor excepteur dolore quis veniam labore quis ut. Consectetur labore nostrud sint quis sint. Enim sunt elit excepteur do nisi minim sunt aliqua enim commodo pariatur. Aliquip ut cillum nisi aliqua mollit sint sit id ipsum voluptate. Aute incididunt incididunt sint non. Elit culpa culpa do consequat.</p>
+        <h1 class="titulo-importante">Titulo</h1>
+        <p id="ultimo-parrafo" class="texto-importante" style="color:fuchsia">Tempor excepteur dolore quis veniam labore quis ut. Consectetur labore nostrud sint quis sint. Enim sunt elit excepteur do nisi minim sunt aliqua enim commodo pariatur. Aliquip ut cillum nisi aliqua mollit sint sit id ipsum voluptate. Aute incididunt incididunt sint non. Elit culpa culpa do consequat.</p>
     </section>
 </body>
 </html>
 
+<!--Prioridades:
+    Estilos en linea
+    Estilos por el ID
+    Estilos por la clase CSS
+    Estilos por el nombre de la etiqueta.
 
+-->
+<!--
+Aqua = > 0
+Fuschia => 15-20
+Rojo => 1
+Blanco => 0
+
+-->
 
 <!--
 R,G,B
