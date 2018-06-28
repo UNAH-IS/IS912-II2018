@@ -1,0 +1,47 @@
+body {
+    padding-top: 5rem;
+    background-color:#EDF0F5;
+}
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.bg-dark {
+    background-color: #3F5C9A!important;
+}
+
+#formulario-login .form-control{
+    font-size: 0.75em;
+}
+
+.btn-primary{
+    background-color: #345cac;
+    border: 0px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.btn-primary:hover{
+    background-color: #1f4186;
+}
+
+.navbar{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#tabla-iconos td{
+    padding:15px;
+    font-size: 1em;
+}
+
+#formulario-signup .form-control{
+    margin:5px;
+}
+
+#texto-pequenio{
+    color: #777;
+    font-size: 11px;
+    width: 316px;
+}

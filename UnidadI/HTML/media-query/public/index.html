@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" /> <!--Poder utilizar caracteres especiales-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Etiquetas básicas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: red;
+        }
+
+        @media screen and (max-width: 992px) {
+            body {
+                background-color: blue;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                background-color: yellow;
+            }
+        }
+
+
+        /***/
+        .columna {
+            float: left;
+            width: 25%;
+            background-color:white;
+            border:1px solid black;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 992px) {
+            .columna {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .columna {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="columna">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis deleniti enim laudantium sed laboriosam voluptates eaque aliquam numquam dolorem et saepe repellendus distinctio accusantium, recusandae, natus illum dolores, nam fugiat.</div>
+    <div class="columna">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis deleniti enim laudantium sed laboriosam voluptates eaque aliquam numquam dolorem et saepe repellendus distinctio accusantium, recusandae, natus illum dolores, nam fugiat.</div>
+    <div class="columna">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis deleniti enim laudantium sed laboriosam voluptates eaque aliquam numquam dolorem et saepe repellendus distinctio accusantium, recusandae, natus illum dolores, nam fugiat.</div>
+    <div class="columna">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis deleniti enim laudantium sed laboriosam voluptates eaque aliquam numquam dolorem et saepe repellendus distinctio accusantium, recusandae, natus illum dolores, nam fugiat.</div>
+</body>
+</html>
