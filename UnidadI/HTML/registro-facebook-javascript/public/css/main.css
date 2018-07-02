@@ -55,3 +55,8 @@ body {
     width: 168px;
     text-shadow: 1px 1px #2c5115;
 }
+
+.input-error{
+    border-color:red;
+    color:red;
+}

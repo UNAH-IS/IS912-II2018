@@ -59,23 +59,41 @@
             <p>It’s free and always will be.</p>
             <br>
             <div class="row" id="formulario-signup">
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"><input class="form-control" type="text" placeholder="First name"></div>
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"><input class="form-control" type="text" placeholder="Last name"></div>
-              <div class="col-12"><input class="form-control" type="text" placeholder="Mobile number or email"></div>
-              <div class="col-12"><input class="form-control" type="password" placeholder="Password"></div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                  <input class="form-control" type="text" placeholder="First name" id="txt-firstname">
+                  <div class="valid-feedback">Es bien</div>
+                  <div class="invalid-feedback">Esta mal</div>
+                  <!--div id="validacion">-</div--><!-- Descomentar en caso de probar la funcionalidad sin bootstrap -->
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <input class="form-control" type="text" placeholder="Last name" id="txt-lastname">
+                <div class="valid-feedback">Es bien</div>
+                <div class="invalid-feedback">Esta mal</div>
+              </div>
+              <div class="col-12">
+                <input class="form-control" type="text" placeholder="Mobile number or email" id="txt-email">
+                <div class="valid-feedback">Es bien</div>
+                <div class="invalid-feedback">Esta mal</div>
+              </div>
+              <div class="col-12">
+                <input class="form-control" type="password" placeholder="Password" id="txt-password">
+                <div class="valid-feedback">Es bien</div>
+                <div class="invalid-feedback">Esta mal</div>
+              </div>
               <div class="col-12">
                 <b>Birthday</b>
-                <input class="form-control" type="date" placeholder="Birthday">
+                <input class="form-control" type="date" placeholder="Birthday" id= "txt-birthday">
+                <div class="valid-feedback">Es bien</div>
+                <div class="invalid-feedback">Esta mal</div>
               </div>
               <div class="col-12">
                 <label><input type="radio" name="rbt-genero" value="F"> Female</label>
                 <label><input type="radio" name="rbt-genero" value="M"> Male</label>
-
                 <p id="texto-pequenio">
                   By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Data Policy</a> and <a href="#">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.
                 </p>
                 <br>
-                <input class="btn btn-success" type="button" value="Sign Up">
+                <input class="btn btn-success" type="button" value="Sign Up" onclick="registrar();">
               </div>
               
             </div>
@@ -88,5 +106,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/controlador.js"></script>
   </body>
 </html>
