@@ -141,3 +141,28 @@ Es posible aplicar estilos de la siguiente forma:
 3. Estilos en archivos externos:
     Se escriben los estilos en un archivo con extensión css y se incluyen en el html de la siguiente forma:
         <link href="url-estilos.css" rel="stylesheet">
+
+
+
+
+Aplicaciones web progresivas (PWA): Aplicaciones web que lucen o funcionan como aplicaciones moviles.
+
+
+Guardar informacion en el navegador:
+    -Cookies
+    -WebSQL: Soportan (Chrome, Safari). ****Deprecada
+    -IndexedDB: Base de datos no sql orientada a documentos, se almacenan objetos json
+
+JSON (Javascript  Object Notation): Formato liviano para intercambio de informacion.
+
+persona = {
+    nombre:"Pedro",
+    edad:35,
+    genero:"Masculino",
+    telefono:666789,
+    fechaNacimiento:{
+        dia:11,
+        mes:"Enero",
+        anio:1999
+    }
+}
