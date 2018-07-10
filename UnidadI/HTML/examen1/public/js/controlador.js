@@ -135,7 +135,8 @@ function registrarPost(){
         var solicitud = objectStorePosts.add(post);
         solicitud.onsuccess = function(evento){
             console.log("Se agrego el post correctamente");
-            //llenarTablaUsuarios();
+            llenarListaPosts();
+            $('#postsModal').modal('hide');
         }
 
         solicitud.onerror = function(evento){
@@ -198,8 +199,7 @@ function llenarTablaUsuarios(){
 
 
 function llenarListaPosts(){
-/*
-   */
+    document.getElementById("lista-posts").innerHTML="";
 
     //Leer el objectstore de usuarios para imprimir la informacion, debe ser en este punto porque esta funcion se ejecuta si se abrio la BD correctamente
     var transaccion = db.transaction(["posts"],"readonly");///readwrite: Escritura/lectura, readonly: Solo lectura
@@ -209,14 +209,29 @@ function llenarListaPosts(){
         //Se ejecuta por cada objeto del objecstore
         if(evento.target.result){
             console.log(evento.target.result.value);
+            var post = evento.target.result.value;
             if (document.getElementById("lista-posts") !=null)
                 document.getElementById("lista-posts").innerHTML += 
                         '<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">'+
                         '<div class="post"><img src="img/profile.jpg" class="rounded-circle img-thumbnail">'+
-                        '<b>'+evento.target.result.value.usuario+'</b><small class="text-muted">'+evento.target.result.value.fecha+'</small>'+
-                        '<hr>'+evento.target.result.value.post+'</div></div>';
-
+                        '<b>'+post.usuario+'</b><small class="text-muted">'+post.fecha+'</small>'+
+                        '<hr>'+post.post+'<br><button type="button" onclick="eliminarPost('+post.codigo+')" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></div></div>';
+ 
             evento.target.result.continue();
         }
     }
+}
+
+
+function eliminarPost(codigoPost){
+    console.log("Eliminar post con codigo: " + codigoPost);
+        var solicitud = 
+            db.transaction(["posts"],"readwrite")
+            .objectStore("posts")
+            .delete(codigoPost);
+            
+        solicitud.onsuccess = function(evento){
+            console.log("Se elimino el post con codigo: " + codigoPost);
+            llenarListaPosts();
+        }
 }

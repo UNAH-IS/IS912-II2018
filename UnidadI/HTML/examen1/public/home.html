@@ -8,6 +8,7 @@
     <title>Facebook</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
@@ -49,27 +50,43 @@
     </nav>
 
     <main role="main" class="container">
-      <div class="row" id="lista-posts">
-        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-          <div class="post">
-            <h5>Agregar post</h5>
-            <select class="form-control" id="slc-usuario"></select>
-            <textarea placeholder="¿Que estas pensando?" class="form-control" id="txt-post"></textarea>
-            </textarea>
-            <input type="date" class="form-control" id="txt-fecha">
-            <br>
-            <input type="button" class="btn btn-primary" value="Post" onclick="registrarPost();">
-          </div>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#postsModal">
+        Nuevo Post
+      </button>
+      <div class="row" id="lista-posts"></div>
+    </main><!-- /.container -->
+
+    <!-- Ventana modal para agregar posts -->
+<div class="modal fade" id="postsModal" tabindex="-1" role="dialog" aria-labelledby="postsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="postsModalLabel">Agregar post</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <select class="form-control" id="slc-usuario"></select>
+          <textarea placeholder="¿Que estas pensando?" class="form-control" id="txt-post"></textarea>
+          </textarea>
+          <input type="date" class="form-control" id="txt-fecha">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          <input type="button" class="btn btn-primary" value="Post" onclick="registrarPost();">
         </div>
       </div>
-    </main><!-- /.container -->
+    </div>
+  </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/controlador.js"></script>
-    <!---script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
     
   </body>
 </html>
