@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Facebook</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <style>
+      .form-control{
+        margin-bottom: 6px;
+      }
+
+      .post{
+        background-color: #FFFFFF; 
+        border: 1px solid #dcdedf;
+        margin: 0 12px;
+        padding: 15px;
+        border-radius:5px;
+        margin-bottom: 10px;
+      }
+
+      .img-thumbnail{
+        max-width: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#"><img src="img/logo-facebook.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+            <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Password">
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <div class="row" id="lista-posts">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="post">
+            <h5>Agregar post</h5>
+            <select class="form-control" id="slc-usuario"></select>
+            <textarea placeholder="¿Que estas pensando?" class="form-control" id="txt-post"></textarea>
+            </textarea>
+            <input type="date" class="form-control" id="txt-fecha">
+            <br>
+            <input type="button" class="btn btn-primary" value="Post" onclick="registrarPost();">
+          </div>
+        </div>
+      </div>
+    </main><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/controlador.js"></script>
+    <!---script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script-->
+    
+  </body>
+</html>
