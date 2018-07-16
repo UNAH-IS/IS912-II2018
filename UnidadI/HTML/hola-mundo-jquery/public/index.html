@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <input type="text" class="texto" id= "txt-nombre" value="Juan">
+    <input type="text" class="texto" id= "txt-apellido" value="Perez">
+    <label><input type="radio" name="rbt-genero" value="F">Femenino</label>
+    <label><input type="radio" name="rbt-genero" value="M">Masculino</label>    
+    <br>
+    <label><input type="checkbox" name="chk-gustos[]" value="Baleadas">Baleadas</label><br>
+    <label><input type="checkbox" name="chk-gustos[]" value="Sopa">Sopa de mondongo</label><br>
+    <label><input type="checkbox" name="chk-gustos[]" value="Nachos">Nachos</label><br>
+    <label><input type="checkbox" name="chk-gustos[]" value="Tajaditas">Tajaditas</label><br>
+    <label><input type="checkbox" name="chk-gustos[]" value="Ella">Ella...</label><br>
+    <input id="btn-accion" type="button" value="Radio Seleccionado">
+    <div id="div-prueba-eventos" style="background-color: black; color: white; padding:50px; font-size: 20px">
+        Este es un div
+    </div>
+    <button type="button" id="btn-ocultar">Ocultar Div</button>
+    <button type="button" id="btn-mostrar">Mostrar Div</button>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        console.log("Valor con jquery: "+$("#txt-nombre").val());
+        console.log("Valor con JS nativo: "+document.getElementById("txt-nombre").value);
+        /*
+        $(".texto")
+        $("input")
+        $("input[type='radio' propiedad='valor']")
+        */
+
+        $("#btn-accion").click(function(){
+            alert("Radioboton seleccionado: " + $("input[name='rbt-genero']:checked").val());
+            console.log($("input[name='chk-gustos[]']:checked").serialize());
+        });
+
+        $("#div-prueba-eventos").click(function(){
+            console.log("Se hizo click");
+        });
+
+        $("#div-prueba-eventos").dblclick(function(){
+            console.log("Se hizo doble click");
+        });
+
+        $("#div-prueba-eventos").mouseenter(function(){
+            console.log("El cursor esta entro en el div");
+            $("#div-prueba-eventos").css("background-color","red");
+        });
+
+        $("#div-prueba-eventos").mouseleave(function(){
+            console.log("El cursor salio del div");
+            $("#div-prueba-eventos").css("background-color","black");
+        });
+
+        $("#btn-mostrar").click(function(){
+            $("#div-prueba-eventos").fadeIn(2000);
+        });
+
+        $("#btn-ocultar").click(function(){
+            $("#div-prueba-eventos").fadeOut(2000);
+        });
+
+    </script>
+</body>
+</html>
