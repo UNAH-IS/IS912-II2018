@@ -9,3 +9,8 @@ http.createServer(function(request, response){ //Request: Peticion o solicitud d
 }).listen(3333);
 
 console.log("Servidor iniciado");
+
+
+//npm install nodemon -g
+//Ejecutar un archivo js:
+// nodemon index.js
