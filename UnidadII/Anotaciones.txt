@@ -1,0 +1,20 @@
+Envio de informacion cliente-servidor (solicitudes o peticiones con parametros):
+    *Peticiones sincronas:
+        *Tiene que utilizarse la etiqueta form con los atributos
+            action: Recurso donde se enviara la informacion
+            method: Metodo de envio de informacion 
+                *GET: Envia la información a traves de la URL
+                    Formato URLEncoded
+                    URL?parametro1=valor2&parametro2=valor2&...&parametroN=valorN
+
+                    Ejemplo:
+                    http://localhost:3333/procesar?
+                    txt-usuario=jperez&
+                    txt-password=asd.456&
+                    btn-accion=Enviar+informacion
+
+
+                *POST:
+        *Los componentes del formulario tienen que tener el atributo name.
+        *Debe haber un boton del tipo submit
+    *Peticiones asincronas (AJAX)

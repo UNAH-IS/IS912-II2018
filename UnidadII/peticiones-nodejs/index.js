@@ -14,7 +14,23 @@ http.createServer(function(request, response){ //Request: Peticion o solicitud d
         response.writeHead(200, {"Content-Type":"text/html"}); //text/html es el tipo MIME, 200 es el codigo HTTP OK
         response.write("<html><body><h1>Pagina 2</h1>"+ detalleURL.pathname+"</body></html>");
         response.end();
-    }else{
+    }else if ( detalleURL.pathname =="/pagina3"){
+       //Servir el archivo fisico
+       fs.readFile("./pagina3.html", function(err,data){
+           //Se ejecuta cuando finaliza de leer el archivo.
+           response.writeHead(200, {"Content-Type":"text/html"});
+           response.write(data);
+           response.end();
+       });
+    }else if ( detalleURL.pathname =="/pollo"){
+        //Servir el archivo fisico
+        fs.readFile("./estilos.css", function(err,data){
+            //Se ejecuta cuando finaliza de leer el archivo.
+            response.writeHead(200, {"Content-Type":"text/css"});
+            response.write(data);
+            response.end();
+        });
+     }else{
         response.writeHead(404, {"Content-Type":"text/html"}); //text/html es el tipo MIME, 200 es el codigo HTTP OK
         response.write("<html><body><h1>404 Pagina no encontrada</h1>"+ detalleURL.pathname+"</body></html>");
         response.end();
