@@ -9,9 +9,23 @@
 <body>
     <h1>Formulario</h1>
     <form action="/procesar" method="GET">
-        <input name="usuario" type="text" placeholder="Usuario">
-        <input name="password" type="password" placeholder="Password">
+        <input value="Juan" name="nombre" type="text" placeholder="Nombre"><br>
+        <input value="Perez" name="apellido" type="text" placeholder="Apellido"><br>
+        <input value="jperez" name="usuario" type="text" placeholder="Usuario"><br>
+        <input value="asd.456" name="password" type="password" placeholder="Password"><br>
+        Genero:<br>
+        <label><input checked name="genero" type="radio" value="M">Masculino</label><br>
+        <label><input name="genero" type="radio" value="F">Femenino</label><br>
+        Gustos:<br>
+        <label><input checked type="checkbox" name="gustos" value="Baleadas">Baleadas</label><br>
+        <label><input type="checkbox" name="gustos" value="Sopa de mondongo">Sopa de mondongo</label><br>
+        <label><input checked type="checkbox" name="gustos" value="Novelas">Novelas</label><br>
+        <label><input type="checkbox" name="gustos" value="Curiles">Curiles</label><br>
+        <label><input checked type="checkbox" name="gustos" value="Ella">Ella</label><br>
         <input name="accion" type="submit" value="Enviar informacion">
     </form>
 </body>
 </html>
+
+
+

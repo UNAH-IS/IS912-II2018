@@ -13,10 +13,16 @@ http.createServer(function(request, response){ //Request: Peticion o solicitud d
             response.end();
         });
     }else if (detalleURL.pathname=="/procesar"){
-        response.writeHead(200,{"Content-Type":"text/html"});
-        response.write("<html><body>Usuario ingresado" + detalleURL.query.usuario+ "</body></html>");
+        var archivo = fs.createWriteStream("usuarios.json", {'flags': 'a'});//a: Append
+        archivo.once("open", function(x){
+            archivo.write(JSON.stringify(detalleURL.query)+"\n");
+            archivo.end();
+
+            response.writeHead(200,{"Content-Type":"text/html"});
+            response.write("<html><body>Se guardo el registro</body></html>");        
+            response.end();
+        });
         
-        response.end();
     }else{
         response.writeHead(404,{"Content-Type":"text/html"});
         response.write("<html><body>404</body></html>");
