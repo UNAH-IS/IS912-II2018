@@ -1,13 +1,79 @@
 $("#slc-usuario").change(function(){
-	alert("USUARIO seleccionado: " + $("#slc-usuario").val());
+	cargarConversacion();
 });
 
-function seleccionarContacto(codigoContacto, nombreContacto){
-	alert("CONTACTO seleccionado: " + codigoContacto + ", Nombre: " + nombreContacto);
+function seleccionarContacto(codigoContacto, nombreContacto, urlImagen){
+	$("#usuario-receptor").val(codigoContacto);
+	$("#nombre-contacto").html(nombreContacto);
+	$("#imagen-contacto").attr("src",urlImagen);
+	cargarConversacion();
+}
+
+function cargarConversacion(){
+	console.log("Enviar al servidor: Emisor: " + $("#slc-usuario").val() + ", Receptor: " + $("#usuario-receptor").val());
+	$.ajax({
+		url:"/obtener-conversacion",
+		method:"GET",
+		data:"emisor="+$("#slc-usuario").val() + "&" + "receptor="+$("#usuario-receptor").val(),
+		dataType:"json",
+		success:function(respuesta){
+			console.log(respuesta);
+			$("#conversation").html("");
+			for(var i=0; i<respuesta.length;i++){
+				var cssClass=""; //sender
+				if ($("#slc-usuario").val() == respuesta[i].codigo_usuario_emisor)
+					cssClass="sender"; 
+				else
+					cssClass="receiver"; 
+				$("#conversation").append(
+					`<div class="row message-body">
+						<div class="col-sm-12 message-main-${cssClass}">
+						<div class="${cssClass}">
+							<div class="message-text">
+							${respuesta[i].mensaje}
+							</div>
+							<span class="message-time pull-right">
+							18:18
+							</span>
+						</div>
+						</div>
+					</div>`
+				);
+			}
+		}
+	});
 }
 
 $("#btn-enviar").click(function(){
-	alert("Enviar mensaje: " + $("#txta-mensaje").val());
+	//alert("Enviar mensaje: " + $("#txta-mensaje").val());
+	var parametros = "emisor="+$("#slc-usuario").val() + "&" + 
+					 "receptor="+$("#usuario-receptor").val() + "&"+
+					 "mensaje="+$("#txta-mensaje").val();
+	$.ajax({
+		url:"/enviar-mensaje",
+		method:"POST",
+		data:parametros,
+		dataType:"json",
+		success:function(respuesta){
+			if (respuesta.affectedRows==1){
+				$("#conversation").append(
+					`<div class="row message-body">
+						<div class="col-sm-12 message-main-sender">
+						<div class="sender">
+							<div class="message-text">
+							${$("#txta-mensaje").val()}
+							</div>
+							<span class="message-time pull-right">
+							18:18
+							</span>
+						</div>
+						</div>
+					</div>`
+				);
+			}
+			console.log(respuesta);
+		}
+	});
 });
 
 
@@ -22,7 +88,7 @@ $(document).ready(function(){
 			for(var i=0; i<respuesta.length; i++){
 				$("#slc-usuario").append('<option value="'+respuesta[i].codigo_usuario+'">'+respuesta[i].nombre_usuario+'</option>');
 				$("#div-contactos").append(
-					`<div class="row sideBar-body" onclick="seleccionarContacto(${respuesta[i].codigo_usuario},'${respuesta[i].nombre_usuario}');">
+					`<div class="row sideBar-body" onclick="seleccionarContacto(${respuesta[i].codigo_usuario},'${respuesta[i].nombre_usuario}','${respuesta[i].url_imagen_perfil}');">
 						<div class="col-sm-3 col-xs-3 sideBar-avatar">
 						<div class="avatar-icon">
 							<img src="${respuesta[i].url_imagen_perfil}">

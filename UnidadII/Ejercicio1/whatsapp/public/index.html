@@ -92,14 +92,14 @@
         <div class="row heading">
           <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
             <div class="heading-avatar-icon">
-              <img src="img/profile-pics/goku.jpg">
+              <img id="imagen-contacto" src="img/profile-pics/goku.jpg">
             </div>
           </div>
           
 
           <div class="col-sm-8 col-xs-7 heading-name">
-            <a class="heading-name-meta">Goku
-            </a>
+            <a class="heading-name-meta" id="nombre-contacto"></a>
+            <input type="hidden" id="usuario-receptor">
             <span class="heading-online">Online</span>
           </div>
 
@@ -111,52 +111,7 @@
         <!-- Heading End -->
 
         <!-- Message Box -->
-        <div class="row message" id="conversation">
-
-          <div class="row message-previous">
-            <div class="col-sm-12 previous">
-            </div>
-          </div>
-
-          <div class="row message-body">
-            <div class="col-sm-12 message-main-receiver">
-              <div class="receiver">
-                <div class="message-text">
-                 Kakaroto!!!!
-                </div>
-                <span class="message-time pull-right">
-                  18:18
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="row message-body">
-            <div class="col-sm-12 message-main-sender">
-              <div class="sender">
-                <div class="message-text">
-                  Que tal Vegueta?
-                </div>
-                <span class="message-time pull-right">
-                  18:19
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="row message-body">
-            <div class="col-sm-12 message-main-receiver">
-              <div class="receiver">
-                <div class="message-text">
-                 Eres un insecto estupido!!!!
-                </div>
-                <span class="message-time pull-right">
-                  18:20
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row message" id="conversation"></div>
 
 
         <!-- Message Box End -->
