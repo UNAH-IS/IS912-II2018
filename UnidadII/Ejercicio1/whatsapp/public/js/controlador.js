@@ -110,4 +110,6 @@ $(document).ready(function(){
 			}
 		}
 	});
+	setInterval(cargarConversacion, 15000);
+
 });
