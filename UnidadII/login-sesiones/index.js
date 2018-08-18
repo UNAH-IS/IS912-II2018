@@ -18,11 +18,12 @@ app.use(express.static("public"));
 app.use(session({secret:"ASDFE$%#%",resave:true, saveUninitialized:true}));
 
 //Verificar si existe una variable de sesion para poner publica la carpeta public admin
-var publicAdmin = express.static("public-admin");
-var publicCajero = express.static("public-cajero");
+var publicAdmin = express.static("public_admin");
+var publicCajero = express.static("public_cajero");
 app.use(
     function(peticion,respuesta,next){
         if (peticion.session.correo){
+            //Significa que el usuario si esta logueado
             if (peticion.session.codigoTipoUsuario == 1)
                 publicCajero(peticion,respuesta,next);
             else if (peticion.session.codigoTipoUsuario == 2)
@@ -64,8 +65,9 @@ app.get("/obtener-sesion", function(peticion, respuesta){
 });
 
 app.get("/logout",function(peticion, respuesta){
-	peticion.session.destroy();
-	respuesta.send("Sesion eliminada");
+    peticion.session.destroy();
+    respuesta.redirect("index.html");
+	//respuesta.send("Sesion eliminada");
 });
 
 app.get("/ruta-restringida",verificarAutenticacion,  function(peticion, respuesta){
